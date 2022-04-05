@@ -1,6 +1,6 @@
 class TweeetsController < ApplicationController
   before_action :set_tweeet, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /tweeets or /tweeets.json
   def index
     @tweeets = Tweeet.all
@@ -22,7 +22,7 @@ class TweeetsController < ApplicationController
   # POST /tweeets or /tweeets.json
   def create
     @tweeet = Tweeet.new(tweeet_params)
-
+    @tweeet.user_id = current_user.id
     respond_to do |format|
       if @tweeet.save
         format.html { redirect_to tweeet_url(@tweeet), notice: "Tweeet was successfully created." }
