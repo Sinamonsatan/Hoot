@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #14171a;
+  color: #f5f8fa;
 }
 
 body, p, ol, ul, td {
@@ -9,19 +9,21 @@ body, p, ol, ul, td {
   line-height: 18px; }
 
 pre {
-  background-color: #eee;
+  background-color: #f5f8fa;
   padding: 10px;
   font-size: 11px; }
 
 a {
-  color: #000; }
+  color: #f5f8fa; }
 
 a:visited {
-  color: #666; }
+  color: #f5f8fa; }
 
 a:hover {
-  color: #fff;
-  background-color: #000; }
+  color: #1DA1F2;
+  background-color: #AAB8C2; 
+  
+}
 
 th {
   padding-bottom: 5px; }
@@ -63,3 +65,7 @@ div.actions {
 
 label {
   display: block; }
+
+  li {
+padding: 5px;
+}
