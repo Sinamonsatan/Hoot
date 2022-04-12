@@ -1,6 +1,6 @@
 class TweeetsController < ApplicationController
   before_action :set_tweeet, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, exept: [:index, :show]
   # GET /tweeets or /tweeets.json
   def index
     @tweeets = Tweeet.all
