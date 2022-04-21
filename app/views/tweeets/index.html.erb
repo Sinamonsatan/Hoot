@@ -13,9 +13,9 @@
   <tbody>
     <% @tweeets.each do |tweeet| %>
       <tr>
-        <h1><td><%= tweeet.user.email %></td></h1>
+        <h1><td><%= link_to tweeet.user.email, user_session_path(tweeet.user) %></td></h1>
         <h2><td><%= tweeet.tweeet %></td></h2>
-        <h3><td><%= tweet.created_at %></td></h3>
+        <h3><td><%= tweeet.created_at %></td></h3>
         <td><%= link_to 'Show', tweeet %></td>
         <td><%= link_to 'Destroy', tweeet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
